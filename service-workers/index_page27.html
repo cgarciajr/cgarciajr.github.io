@@ -7,7 +7,7 @@
       <p>Registration status: <strong id="status"></strong></p>
       <script>
         if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('service-worker.js', { scope: './'}).
+          navigator.serviceWorker.register('service-worker27.js', { scope: './'}).
           then(registration => {
             document.getElementById('status').innerHTML = 'successful';
           }).catch(error => {
