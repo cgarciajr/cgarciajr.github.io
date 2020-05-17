@@ -1,1 +1,19 @@
-"Service Workers" 
+<!DOCTYPE html>
+  <html lang="eng">
+    <head></head>
+    <body>
+      <p>Registration status: <strong id="status"></strong></p>
+      <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js', { scope: './'}).
+          then(serviceWorker => {
+            document.getElementById('status').innerHTML = 'successful';
+          }).catch(error => {
+            document.getElementById('status').innerHTML= error;
+          });
+        } else {
+          document.getElementById('status').innerHTML='unavailable';
+        }
+      </script>
+    </body>
+  </html>
