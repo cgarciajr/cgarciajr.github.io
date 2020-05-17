@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html lang="eng">
     <head>
-      <title>Detailed Registration</title>D
+      <title>Detailed Registration</title>
     </head>
     <body>
       <p>Registration status: <strong id="status"></strong></p>
@@ -31,7 +31,6 @@
 
             if(serviceWorker) {
               printState(serviceWorker.state);
-
               serviceWorker.addEventListener('stateChange', e => { printState(e.target.state); });
             }
           }).catch(error => {
